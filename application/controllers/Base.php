@@ -5,7 +5,10 @@ class Base extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('template/inicio');
+		$data = array(
+			'title' => 'Panel administrativo'
+		);
+		$this->load->view('template/inicio', $data);
 		$this->load->view('home/index');
 		$this->load->view('template/final');
 	}
